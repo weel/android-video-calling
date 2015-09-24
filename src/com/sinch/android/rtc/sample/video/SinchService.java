@@ -18,8 +18,8 @@ import android.util.Log;
 
 public class SinchService extends Service {
 
-    private static final String APP_KEY = "enter-application-key";
-    private static final String APP_SECRET = "enter-application-secret";
+    private static final String APP_KEY = "your-application-key";
+    private static final String APP_SECRET = "your-application-secret";
     private static final String ENVIRONMENT = "sandbox.sinch.com";
 
     public static final String CALL_ID = "CALL_ID";
