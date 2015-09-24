@@ -39,7 +39,7 @@ public class SinchService extends Service {
     @Override
     public void onDestroy() {
         if (mSinchClient != null && mSinchClient.isStarted()) {
-            mSinchClient.terminate();
+            mSinchClient.terminateGracefully();
         }
         super.onDestroy();
     }

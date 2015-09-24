@@ -30,41 +30,6 @@ In the AndroidManifest.xml file add the following permissions:
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
 
-## Setting up a Video Call
-
-Just like audio calls, video calls are placed through the CallClient and events are received using the CallClientListener. The call client is owned by the SinchClient and accessed using sinchClient.getCallClient(). Calling is not enabled by default.
-
-Once you have created a VideoCallListener and added it to a call, the onVideoTrackAdded() method will be called.
-
-```
-@Override
-    public void onVideoTrackAdded(Call call) {
-        // Get a reference to your SinchClient, in the samples this is done through the service interface:
-        VideoController vc = getSinchServiceInterface().getVideoController();
-        View myPreview = vc.getLocalView();
-        View remoteView = vc.getRemoteView();
-
-        // Add the views to your view hierarchy
-        ...
-    }
-```
-
-Once the call has ended remove Sinch views from your screen.
-
-```
-@Override
- public void onCallEnded(Call call) {
-     CallEndCause cause = call.getDetails().getEndCause();
-     Log.d(TAG, "Call ended. Reason: " + cause.toString());
-     mAudioPlayer.stopProgressTone();
-     setVolumeControlStream(AudioManager.USE_DEFAULT_STREAM_TYPE);
-     String endMsg = "Call ended: " + call.getDetails().toString();
-     Toast.makeText(CallScreenActivity.this, endMsg, Toast.LENGTH_LONG).show();
-
-     endCall();
- }
- ```
-
 ## Login
 
 Now that we have our video call setup, we can now add the login.
@@ -143,6 +108,42 @@ protected void onCreate(Bundle savedInstanceState) {
         mCallId = getIntent().getStringExtra(SinchService.CALL_ID);
     }
 ```
+
+## Setting up a Video Call
+
+Just like audio calls, video calls are placed through the CallClient and events are received using the CallClientListener. The call client is owned by the SinchClient and accessed using sinchClient.getCallClient(). Calling is not enabled by default.
+
+Once you have created a VideoCallListener and added it to a call, the onVideoTrackAdded() method will be called.
+
+```
+@Override
+    public void onVideoTrackAdded(Call call) {
+        // Get a reference to your SinchClient, in the samples this is done through the service interface:
+        VideoController vc = getSinchServiceInterface().getVideoController();
+        View myPreview = vc.getLocalView();
+        View remoteView = vc.getRemoteView();
+
+        // Add the views to your view hierarchy
+        ...
+    }
+```
+
+Once the call has ended remove Sinch views from your screen.
+
+```
+@Override
+ public void onCallEnded(Call call) {
+     CallEndCause cause = call.getDetails().getEndCause();
+     Log.d(TAG, "Call ended. Reason: " + cause.toString());
+     mAudioPlayer.stopProgressTone();
+     setVolumeControlStream(AudioManager.USE_DEFAULT_STREAM_TYPE);
+     String endMsg = "Call ended: " + call.getDetails().toString();
+     Toast.makeText(CallScreenActivity.this, endMsg, Toast.LENGTH_LONG).show();
+
+     endCall();
+ }
+ ```
+
 ## Making Outgoing Calls
 
 Create the callscreen.xml and add a call button.
@@ -230,4 +231,4 @@ private void answerClicked() {
     }
 ```
 
-That's all for our Video Call tutorial! Any questions you may have you can contact us via Twitter @SinchDev or dev@sinch.com on email. 
+That's all for our Video Call tutorial! Any questions you may have you can contact us via Twitter @SinchDev or dev@sinch.com on email.
