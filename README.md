@@ -1,8 +1,11 @@
 # Build a Simple Android Video App with Sinch
 
 Video brings a new dimension of communication to your app. The ability to see and speak with another person over video enhances the user experience. This tutorial will walk you through building a simple Android Video app. The finished app will look like this:
-
-<img src="images/view_1.png" style="width:50%"> <img src="images/view_2.png" style="width:50%">
+<div class="row">
+<div class="col-md-6">
+<img src="images/view_1.png" style="width:50%"></div>
+<div class="col-md-6"><img src="images/view_2.png" style="width:50%">
+</div></div>
 
 The completed source code for this tutorial is available at [GitHub](https://github.com/sinch/android-video-calling).
 
