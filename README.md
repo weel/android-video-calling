@@ -1,6 +1,6 @@
 # Build a Simple Android Video App with Sinch
 
-Video brings a new dimension of communication to your app. The ability to see and speak with another person over video enhances the user experience. This tutorial will walk you through building a simple Android Video app. The finished app will look like this:
+Video brings a new dimension of interactivity to your app. The ability to see and speak with another person over video enhances the user experience. This tutorial will walk you through building a simple Android Video app. The finished app will look like this:
 
 <img src="images/view_1.png"> <img src="images/view_2.png">
 
@@ -230,5 +230,9 @@ private void answerClicked() {
         }
     }
 ```
+
+Here's a look at how your now completed app should look:
+
+<img src="images/view_3.png">
 
 That's all for our Video Call tutorial! Any questions you may have you can contact us via Twitter @SinchDev or dev@sinch.com on email.
