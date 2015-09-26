@@ -51,4 +51,4 @@
             android:textSize="22sp"
             android:textStyle="bold" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
 
-</RelativeLayout><!-- From: file:/Users/carengarcia/Desktop/android-video-calling/res/layout/login.xml -->
+</RelativeLayout><!-- From: file:/Users/carengarcia/android-video-calling/res/layout/login.xml -->
