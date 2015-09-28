@@ -1,4 +1,4 @@
-# Build a Simple Android Video App with Sinch
+# Building an Android Video Calling App
 
 ##The secret sauce to stickiness
 One of the things successful social apps have in common is continuously adding multimedia, providing users with everything they could possibly need to improve conversations. As the social app market saturates and competition toughens, [rich and native communication is the secret sauce] (https://www.sinch.com/opinion/stats-says-now-perfect-time-add-communication-app/) to user retention. And video is the special ingredient.
