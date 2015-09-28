@@ -1,15 +1,16 @@
 # Build a Simple Android Video App with Sinch
 
-Video brings a new dimension of interactivity to your app. The ability to see and speak with another person over video enhances the user experience. This tutorial will walk you through building a simple Android Video app. The finished app will look like this:
+##The secret sauce to stickiness
+One of the things successful social apps have in common is continuously adding multimedia, providing users with everything they could possibly need to improve conversations. As the social app market saturates and competition toughens, [rich and native communication is the secret sauce] (https://www.sinch.com/opinion/stats-says-now-perfect-time-add-communication-app/) to user retention. And video is the special ingredient.
 
+This tutorial will walk you through building a simple Android Video Calling app that will look like this:
 <img src="images/view_3.png">
-
 The completed source code for this tutorial is available at [GitHub](https://github.com/sinch/android-video-calling).
 
 ## Setup
 Create a new project in Android Studio. You can use Eclipse if preferred, but this tutorial was built and tested in Android Studio.
 
-Next create an app in the [Sinch Dashboard](https://www.sinch.com/dashboard/#/signup). Name the app with your title of choice and click "Create."
+Next, create an app in the [Sinch Dashboard](https://www.sinch.com/dashboard/#/signup). Name the app with your title of choice and click "Create."
 
 Take note of your key and secret for this app, you'll be needing it in a few minutes.
 
@@ -32,7 +33,7 @@ In the AndroidManifest.xml file add the following permissions:
 
 ## Login
 
-Now that we have our video call setup, we can now add the login.
+Now that we have our video call setup, we can add the login.
 
 Create the login.xml layout with a text edit and button.
 
@@ -231,7 +232,4 @@ private void answerClicked() {
     }
 ```
 
-Here's a look at how your now completed app should look:
-
-
-That's all for our Video Call tutorial! Any questions you may have you can contact us via Twitter @SinchDev or dev@sinch.com on email.
+That's all for now folks! As you know, we're happy to continue talking to you on Twitter @SinchDev or email dev@sinch.com.
