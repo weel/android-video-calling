@@ -43,5 +43,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile files('libs/sinch-android-rtc-3.7.2-VIDEO-SNAPSHOT.jar')
+    compile files('libs/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT.jar')
 }

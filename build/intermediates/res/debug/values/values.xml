@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/carengarcia/android-video-calling/res/values/colors.xml -->
+    <!-- From: file:/Users/carengarcia/Downloads/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT/samples/sinch-rtc-sample-video/res/values/colors.xml -->
     <eat-comment/>
     <color name="greyish">#fff2f1f2</color>
     <color name="off_white">#fffafafa</color>
     <color name="sinch_purple">#ff63029d</color>
-    <!-- From: file:/Users/carengarcia/android-video-calling/res/values/strings.xml -->
+    <!-- From: file:/Users/carengarcia/Downloads/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT/samples/sinch-rtc-sample-video/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Sinch Video</string>
-    <!-- From: file:/Users/carengarcia/android-video-calling/res/values/styles.xml -->
+    <!-- From: file:/Users/carengarcia/Downloads/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT/samples/sinch-rtc-sample-video/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
         <!--
