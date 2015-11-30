@@ -99,7 +99,7 @@ public class IncomingCallScreenActivity extends BaseActivity {
 
         @Override
         public void onVideoTrackAdded(Call call) {
-            // TODO: Show some kind of icon its a video call
+            // Display some kind of icon showing it's a video call
         }
     }
 

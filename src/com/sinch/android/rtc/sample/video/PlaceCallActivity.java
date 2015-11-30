@@ -59,7 +59,7 @@ public class PlaceCallActivity extends BaseActivity {
             return;
         }
 
-        Call call = getSinchServiceInterface().callUser(userName);
+        Call call = getSinchServiceInterface().callUserVideo(userName);
         String callId = call.getCallId();
 
         Intent callScreen = new Intent(this, CallScreenActivity.class);

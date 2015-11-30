@@ -1,5 +1,6 @@
 package com.sinch.android.rtc.sample.video;
 
+import com.sinch.android.rtc.AudioController;
 import com.sinch.android.rtc.ClientRegistration;
 import com.sinch.android.rtc.Sinch;
 import com.sinch.android.rtc.SinchClient;
@@ -18,8 +19,8 @@ import android.util.Log;
 
 public class SinchService extends Service {
 
-    private static final String APP_KEY = "your-application-key";
-    private static final String APP_SECRET = "your-application-secret";
+    private static final String APP_KEY = "enter-application-key";
+    private static final String APP_SECRET = "enter-application-secret";
     private static final String ENVIRONMENT = "sandbox.sinch.com";
 
     public static final String CALL_ID = "CALL_ID";
@@ -39,7 +40,7 @@ public class SinchService extends Service {
     @Override
     public void onDestroy() {
         if (mSinchClient != null && mSinchClient.isStarted()) {
-            mSinchClient.terminateGracefully();
+            mSinchClient.terminate();
         }
         super.onDestroy();
     }
@@ -79,12 +80,8 @@ public class SinchService extends Service {
 
     public class SinchServiceInterface extends Binder {
 
-        public Call callPhoneNumber(String phoneNumber) {
-            return mSinchClient.getCallClient().callPhoneNumber(phoneNumber);
-        }
-
-        public Call callUser(String userId) {
-            return mSinchClient.getCallClient().callUser(userId);
+        public Call callUserVideo(String userId) {
+            return mSinchClient.getCallClient().callUserVideo(userId);
         }
 
         public String getUserName() {
@@ -112,7 +109,17 @@ public class SinchService extends Service {
         }
 
         public VideoController getVideoController() {
+            if (!isStarted()) {
+                return null;
+            }
             return mSinchClient.getVideoController();
+        }
+
+        public AudioController getAudioController() {
+            if (!isStarted()) {
+                return null;
+            }
+            return mSinchClient.getAudioController();
         }
     }
 
