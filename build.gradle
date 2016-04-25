@@ -1,9 +1,10 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:2.1.0-rc1'
     }
 }
 apply plugin: 'com.android.application'
@@ -13,12 +14,12 @@ repositories {
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 19
+        targetSdkVersion 23
     }
 
     buildTypes {
@@ -43,5 +44,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile files('libs/sinch-android-rtc-3.8.0-VIDEO-SNAPSHOT.jar')
+    compile files('libs/sinch-android-rtc-3.9.3.jar')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
 }
